@@ -6,6 +6,7 @@ class Request(models.Model):
     id = models.AutoField(primary_key=True)
     device = ipaddress
     path = models.CharField(max_length=255)
+    nmos_data = models.TextField(null=True)
     request_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
